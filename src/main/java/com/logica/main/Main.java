@@ -1,8 +1,19 @@
 package com.logica.main;
 
 import com.logica.clases.*;
+import com.logica.clasesExtra.Auto;
+import com.logica.clasesExtra.Bicicleta;
+import com.logica.clasesExtra.Moto;
+import com.logica.clasesExtra.Vehiculo;
 
 public final class Main {
+
+    public static void pruebaVehiculo(Vehiculo vehiculo){
+        vehiculo.acelerar();
+        vehiculo.frenar();
+        System.out.println("-----------------------------");
+
+    }
     public static void main(String[] args) {
 
     /*
@@ -32,5 +43,12 @@ public final class Main {
     * 4. Desarrolla un código que compruebe que se cumple el LSP.
     */
 
-    }
+    Vehiculo a = new Auto();    
+    Vehiculo b = new Bicicleta();
+    Vehiculo m = new Moto();
+
+    pruebaVehiculo(a);
+    pruebaVehiculo(b);
+    pruebaVehiculo(m);
+  }
 }
